@@ -212,7 +212,7 @@ router.post(
     try {
       course = await Course.create(req.body);
       res
-        .location("/course" + course.id)
+        .location("/course/" + course.id)
         .status(201)
         .end();
     } catch (e) {
